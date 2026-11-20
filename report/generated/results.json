@@ -1,0 +1,54 @@
+{
+  "input_file": "data/raw/caida_libre_tracker.csv",
+  "cleaning": {
+    "original_rows": 51,
+    "dropped_rows": 0,
+    "valid_rows": 51
+  },
+  "outlier_screening": {
+    "count": 0,
+    "threshold_mad": 4.5,
+    "robust_sigma_m": 0.00292923375819069,
+    "indices": []
+  },
+  "settings": {
+    "smoothing": "savgol",
+    "window": 9,
+    "polyorder": 2,
+    "sigma_position_m": 0.005,
+    "sigma_scale_relative": 0.0,
+    "gravity_reference_m_s2": 9.81
+  },
+  "fit": {
+    "model": "free_fall_quadratic",
+    "parameters": {
+      "y0": 0.11942596721591399,
+      "v0": 0.16342313203249256,
+      "acceleration": 9.786318622272326
+    },
+    "standard_errors": {
+      "y0": 0.0020206606403638102,
+      "v0": 0.012459984864057387,
+      "acceleration": 0.03213260422088757
+    },
+    "metrics": {
+      "r_squared": 0.9999886461817994,
+      "rmse": 0.0029410080766851293,
+      "mae": 0.0024350124486013885,
+      "residual_std": 0.002970272559424422
+    },
+    "gravity_reference": 9.81,
+    "relative_gravity_error_percent": 0.24140038458384055
+  },
+  "processed_file": "data/processed/caida_libre_tracker_processed.csv",
+  "figures": [
+    "report/figures/posicion_tiempo.png",
+    "report/figures/posicion_tiempo.pdf",
+    "report/figures/velocidad_tiempo.png",
+    "report/figures/velocidad_tiempo.pdf",
+    "report/figures/aceleracion_tiempo.png",
+    "report/figures/aceleracion_tiempo.pdf",
+    "report/figures/residuos_ajuste.png",
+    "report/figures/residuos_ajuste.pdf"
+  ]
+}
